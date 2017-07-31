@@ -1,5 +1,5 @@
-Idea.delete_all
 Comment.delete_all
+Idea.delete_all
 Category.delete_all
 User.delete_all
 
@@ -65,7 +65,7 @@ sci1_idea_comment2 = Comment.create({
   user: user_4,
   comment: sci1_idea_comment1,
   votes: 1,
-  text: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. '
+  text: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.'
 })
 
 sci1_idea_comment3 = Comment.create({
