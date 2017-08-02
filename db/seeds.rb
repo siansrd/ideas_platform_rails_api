@@ -8,10 +8,10 @@ art_cat = Category.create({ name: 'art' })
 lit_cat = Category.create({ name: 'literature' })
 soc_cat = Category.create({ name: 'social' })
 
-user_1 = User.create({ name: 'jamie', email: 'jamie@email.com', password: 'password' })
-user_2 = User.create({ name: 'sarah', email: 'sarah@email.com', password: 'password' })
-user_3 = User.create({ name: 'wissam', email: 'wissam@email.com', password: 'password' })
-user_4 = User.create({ name: 'rona', email: 'rona@email.com', password: 'password' })
+user_1 = User.create({ name: 'jamie', email: 'jamie@email', password: 'password' })
+user_2 = User.create({ name: 'sarah', email: 'sarah@email', password: 'password' })
+user_3 = User.create({ name: 'wissam', email: 'wissam@email', password: 'password' })
+user_4 = User.create({ name: 'rona', email: 'rona@email', password: 'password' })
 
 sci2_idea = Idea.create({ 
   title: 'How to better peer review papers',
