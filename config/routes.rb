@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   scope "/api" do
     resources :ideas
-    resources :users
+    resources :users do
+      resources :ideas
+    end
     resources :categories
   end 
   # The priority is based upon order of creation: first created -> highest priority.
