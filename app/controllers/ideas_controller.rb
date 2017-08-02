@@ -10,9 +10,10 @@ class IdeasController < ApplicationController
 
   def show
     idea = Idea.find(params[:id])
-    render json: idea.as_json({
-      include: :comments
-    })
+    render json: idea, :include => [ 
+      {:user => {:only => :name}},
+      {:comments => {:include => {:user => {:only => :name}}}},
+    ]
   end
 
   def create
