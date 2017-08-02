@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show 
     user = User.where(:email => params[:id])
-    render json: user
+    render json: user, :only => [:name, :id]
   end
 
 end
