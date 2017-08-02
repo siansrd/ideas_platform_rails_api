@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope "/api" do
     resources :ideas
     resources :users
+    resources :categories
   end 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
