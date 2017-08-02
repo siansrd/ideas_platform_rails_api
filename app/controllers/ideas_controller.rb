@@ -12,6 +12,7 @@ class IdeasController < ApplicationController
     idea = Idea.find(params[:id])
     render json: idea, :include => [ 
       {:user => {:only => :name}},
+      {:category => {:only => :name}},
       {:comments => {:include => {:user => {:only => :name}}}},
     ]
   end
