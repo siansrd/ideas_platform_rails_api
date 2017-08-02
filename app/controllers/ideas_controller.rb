@@ -8,6 +8,11 @@ class IdeasController < ApplicationController
     ]
   end
 
+  def ideas_by_user
+    ideas = Idea.where(:user_id => params[:user_id])
+    render json: ideas
+  end
+
   def show
     idea = Idea.find(params[:id])
     render json: idea, :include => [ 

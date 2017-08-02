@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   scope "/api" do
+
+    get '/users/:user_id/ideas' => 'ideas#ideas_by_user'
     resources :ideas
     resources :users do
       resources :ideas
