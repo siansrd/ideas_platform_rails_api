@@ -34,7 +34,11 @@ class IdeasController < ApplicationController
   def update
     idea = Idea.find(params[:id]) 
     if idea.update_attributes(idea_params)
-      render :json => idea
+      render :json => idea, :include => [ 
+      {:user => {:only => :name}},
+      {:category => {:only => :name}},
+      {:comments => {:include => {:user => {:only => :name}}}},
+    ]
     else
       render :json => { status: :update_failed }
     end
